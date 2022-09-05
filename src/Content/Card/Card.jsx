@@ -2,7 +2,7 @@ import React from "react";
 import "./Card.css";
 import { useState } from "react";
 
-export default function Card({ card, check, filter, isMatched, final, react }) {
+export default function Card({ card, check, filter, isMatched, final }) {
   const [rotate, setRotate] = useState(false);
 
   const rotateCard = (card) => {
@@ -13,7 +13,7 @@ export default function Card({ card, check, filter, isMatched, final, react }) {
     if (!isMatched) {
       setTimeout(() => {
         setRotate(false);
-      }, 1000);
+      }, 1600);
     }
   };
 
@@ -22,7 +22,6 @@ export default function Card({ card, check, filter, isMatched, final, react }) {
       onClick={() => rotateCard(card)}
       className={rotate ? "card rotated" : final ? "card rotated" : "card"}
     >
-      {/* <h2 className="cardNumber">{card.number}</h2> */}
       <img
         className="cardNumber"
         src={card.img}

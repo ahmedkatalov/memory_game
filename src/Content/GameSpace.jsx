@@ -1,6 +1,6 @@
 import React from "react";
 import Card from "./Card/Card";
-import { useState, useEffect } from "react";
+import { useState, useMemo } from "react";
 
 export default function GameSpace({ cards }) {
   const [filterCards, setFilterCards] = useState([]);
@@ -11,7 +11,7 @@ export default function GameSpace({ cards }) {
     setFilterCards([...filterCards, card]);
   };
 
-  useEffect(() => {
+  useMemo(() => {
     if (filterCards.length > 1) {
       if (
         filterCards[0].number === filterCards[1].number &&
