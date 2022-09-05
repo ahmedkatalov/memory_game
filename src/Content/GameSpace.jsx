@@ -28,10 +28,6 @@ export default function GameSpace({ cards }) {
 
   const finals = final.flat();
 
-  const react = Array.isArray(reaction) ? reaction.flat() : reaction;
-
-  console.log(reaction);
-
   return (
     <div className="gameSpace">
       {cards.map((item) => {
