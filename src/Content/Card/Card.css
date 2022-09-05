@@ -1,0 +1,33 @@
+.card {
+  width: 200px;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  background-color: rgb(232, 232, 232);
+  border-radius: 8px;
+  transition: 1s;
+  transform: scale(1) rotateY(-180deg);
+}
+
+.card:active {
+  transform: scale(0.97) rotateY(-180deg);
+  transition: transform 0.2s;
+}
+
+.cardNumber {
+  opacity: 0;
+  transition: 0.3s;
+  user-select: none;
+}
+
+.rotated {
+  transform: rotateY(0deg) !important;
+  transition: 1s;
+}
+
+.rotated .cardNumber {
+  opacity: 1;
+  transition: 0.3s;
+}
