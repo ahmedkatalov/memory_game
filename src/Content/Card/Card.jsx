@@ -1,6 +1,5 @@
-import React from "react";
 import "./Card.css";
-import { useState } from "react";
+import React, { useState } from "react";
 
 export default function Card({ card, check, filter, isMatched, final }) {
   const [rotate, setRotate] = useState(false);
